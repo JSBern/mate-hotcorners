@@ -22,7 +22,7 @@ from Xlib import display
 from Xlib.ext.xtest import fake_input
 from Xlib import X
 from subprocess import Popen, PIPE, STDOUT
-import sys, time, os, ConfigParser, re
+import sys, time, os, configparser, re
 import argparse
 
 check_intervall = 0.2
@@ -45,7 +45,7 @@ rt = width - 1
 bt = height - 1
 
 if opts.kill:
-    print "Attempting to kill any running instances..."
+    print ("Attempting to kill any running instances...")
     os.system('pkill -9 -f bl-hotcorners')
     exit()
 
